@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widget/already_have_account_text.dart';
 import 'widget/login_here_button.dart';
-import 'widget/sign_up_background.dart';
+import 'widget/sign_up_background_thumbnail.dart';
 import 'widget/sign_up_button.dart';
 import 'widget/sign_up_email_text_field.dart';
 import 'widget/sign_up_info_text.dart';
@@ -37,52 +37,56 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          const SignUpBackground(image: 'assets/images/auth-img.png'),
-          SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Form(
-              key: _formKey,
-              autovalidateMode: AutovalidateMode.onUserInteraction,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const SizedBox(height: 60),
-                  Row(
+      body: Form(
+        key: _formKey,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              children: [
+                const SignUpBackgroundThumbnail(
+                    image: 'assets/images/auth-img.png'),
+                Positioned(
+                  top: 60,
+                  right: 20,
+                  left: 20,
+                  child: Row(
                     children: const [
                       SignUpLogoThumbnail(thumbnail: 'assets/images/logo.png'),
                       SizedBox(width: 10),
                       SignUpLogoText(name: 'scratch'),
                     ],
                   ),
-                  const SizedBox(height: 45),
-                  const SignUpTitleText(title: 'Start from Scratch'),
-                  const SizedBox(height: 140),
-                  const SignUpInfoText(info: 'Create account to continue.'),
-                  const SizedBox(height: 20),
-                  SignUpNameTextField(controller: _fullNameController),
-                  const SizedBox(height: 20),
-                  SignUpEmailTextField(controller: _emailController),
-                  const SizedBox(height: 20),
-                  SignUpPasswordTextField(
-                    controller: _passwordController,
-                    toggle: () =>
-                        setState(() => _showPassword = !_showPassword),
-                    obscureText: _showPassword,
-                  ),
-                  const SizedBox(height: 30),
-                  SignUpButton(onPressed: () {}),
-                  const SizedBox(height: 30),
-                  const AlreadyHaveAccountText(),
-                  LoginHereButton(onPressed: () {}),
-                  const SizedBox(height: 30),
-                ],
-              ),
+                ),
+                const Positioned(
+                  top: 130,
+                  right: 20,
+                  left: 20,
+                  child: SignUpTitleText(title: 'Start from Scratch'),
+                ),
+              ],
             ),
-          ),
-        ],
+            const SizedBox(height: 20),
+            const SignUpInfoText(info: 'Create account to continue.'),
+            const SizedBox(height: 20),
+            SignUpNameTextField(controller: _fullNameController),
+            const SizedBox(height: 20),
+            SignUpEmailTextField(controller: _emailController),
+            const SizedBox(height: 20),
+            SignUpPasswordTextField(
+              controller: _passwordController,
+              toggle: () => setState(() => _showPassword = !_showPassword),
+              obscureText: _showPassword,
+            ),
+            const SizedBox(height: 30),
+            SignUpButton(onPressed: () {}),
+            const SizedBox(height: 30),
+            const AlreadyHaveAccountText(),
+            LoginHereButton(onPressed: () {}),
+            const SizedBox(height: 30),
+          ],
+        ),
       ),
     );
   }

@@ -6,12 +6,15 @@ class AlreadyHaveAccountText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Align(
-      alignment: Alignment.center,
-      child: Text(
-        'Already have an account?',
-        textAlign: TextAlign.center,
-        style: subtleTextStyle,
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Align(
+        alignment: Alignment.center,
+        child: Text(
+          'Already have an account?',
+          textAlign: TextAlign.center,
+          style: subtleTextStyle,
+        ),
       ),
     );
   }

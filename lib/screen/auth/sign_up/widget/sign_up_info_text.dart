@@ -9,9 +9,12 @@ class SignUpInfoText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      info,
-      style: grayTextStyle,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Text(
+        info,
+        style: grayTextStyle,
+      ),
     );
   }
 }

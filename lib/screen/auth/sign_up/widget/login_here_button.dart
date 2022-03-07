@@ -9,13 +9,16 @@ class LoginHereButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      child: TextButton(
-        onPressed: onPressed,
-        child: Text(
-          'Login Here',
-          textAlign: TextAlign.center,
-          style: buttonStyle.copyWith(color: CustomColor.primaryColor),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Align(
+        child: TextButton(
+          onPressed: onPressed,
+          child: Text(
+            'Login Here',
+            textAlign: TextAlign.center,
+            style: buttonStyle.copyWith(color: CustomColor.primaryColor),
+          ),
         ),
       ),
     );
