@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screen/auth/splash/splash_screen.dart';
+import 'screen/auth/sign_up/sign_up_screen.dart';
 import 'theme/custom_theme.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: CustomTheme.lightTheme,
-      home: const SplashScreen(),
+      home: const SignUpScreen(),
     );
   }
 }
