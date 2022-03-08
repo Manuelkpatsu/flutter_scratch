@@ -3,21 +3,23 @@ import 'package:equatable/equatable.dart';
 class Recipe extends Equatable {
   final String name;
   final String thumbnail;
-  final String chef;
+  final String chefName;
+  final String chefThumbnail;
   final String description;
   final int numberOfLikes;
   final int numberOfComments;
-  final String date;
+  final String createdAt;
   final bool favorite;
 
   const Recipe({
     required this.name,
     required this.thumbnail,
-    required this.chef,
+    required this.chefName,
+    required this.chefThumbnail,
     required this.description,
     required this.numberOfLikes,
     required this.numberOfComments,
-    required this.date,
+    required this.createdAt,
     required this.favorite,
   });
 
@@ -25,11 +27,12 @@ class Recipe extends Equatable {
   List<Object?> get props => [
         name,
         thumbnail,
-        chef,
+        chefName,
+        chefThumbnail,
         description,
         numberOfLikes,
         numberOfComments,
-        date,
+        createdAt,
         favorite,
       ];
 }

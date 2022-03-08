@@ -33,4 +33,5 @@ class CustomColor {
   static const Color logoColor = Color(0xff363837);
   static const Color overlayColor = Color.fromRGBO(40, 41, 40, 0.5);
   static const Color buttonShadowColor = Color.fromRGBO(13, 51, 32, 0.1);
+  static const Color cardColor = Color.fromRGBO(0, 0, 0, 0.0001);
 }
