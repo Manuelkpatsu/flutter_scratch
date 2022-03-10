@@ -1,14 +1,47 @@
 import 'package:flutter/material.dart';
 
-class SearchScreen extends StatelessWidget {
+import 'widget/empty_search_state.dart';
+import 'widget/non_empty_search_state.dart';
+import 'widget/search_text_field.dart';
+
+class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
 
   @override
+  State<SearchScreen> createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Search Screen'),
+    return Scaffold(
+      appBar: AppBar(
+        title: SearchTextField(
+          controller: _searchController,
+          onFilterTap: () {},
+          onChanged: (String value) {
+            setState(() {
+              _searchController.value = TextEditingValue(
+                  text: value,
+                  selection: TextSelection(
+                    baseOffset: value.length,
+                    extentOffset: value.length,
+                  ));
+            });
+          },
+        ),
       ),
+      body: _searchController.text.isEmpty
+          ? const EmptySearchState()
+          : const NonEmptySearchState(),
     );
   }
 }

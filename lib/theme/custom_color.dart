@@ -24,6 +24,7 @@ class CustomColor {
   static const Color redColor = Color(0xffc44343);
   static const Color textColor = Color(0xff030f09);
   static const Color grayTextColor = Color(0xff606060);
+  static const Color dividerColor = Color(0xffe6e6e6);
   static const Color lightGrayTextColor = Color(0xffa8a8a8);
   static const Color deepGreyColor = Color(0xff767676);
   static const Color greyColor = Color(0xffcccccc);
@@ -34,4 +35,5 @@ class CustomColor {
   static const Color overlayColor = Color.fromRGBO(40, 41, 40, 0.5);
   static const Color buttonShadowColor = Color.fromRGBO(13, 51, 32, 0.1);
   static const Color cardColor = Color.fromRGBO(0, 0, 0, 0.0001);
+  static const Color profileOverColor = Color.fromRGBO(255, 255, 255, 0.7);
 }
