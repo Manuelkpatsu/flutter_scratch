@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widget/empty_search_state.dart';
 import 'widget/non_empty_search_state.dart';
+import 'widget/search_filter_dialog.dart';
 import 'widget/search_text_field.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -26,7 +27,14 @@ class _SearchScreenState extends State<SearchScreen> {
       appBar: AppBar(
         title: SearchTextField(
           controller: _searchController,
-          onFilterTap: () {},
+          onFilterTap: () {
+            showDialog(
+              context: context,
+              builder: (BuildContext context) {
+                return const SearchFilterDialog();
+              },
+            );
+          },
           onChanged: (String value) {
             setState(() {
               _searchController.value = TextEditingValue(
