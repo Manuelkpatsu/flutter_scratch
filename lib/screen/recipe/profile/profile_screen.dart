@@ -3,6 +3,7 @@ import 'package:scratch/model/profile.dart';
 import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
 import 'package:scratch/screen/recipe/profile/recipe_category_tile.dart';
+import 'package:scratch/screen/recipe/settings/settings_screen.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 
@@ -163,7 +164,14 @@ class _ProfileScreenState extends State<ProfileScreen>
       appBar: AppBar(
         title: const MyKitchenText(),
         centerTitle: false,
-        actions: [SettingsButton(onPressed: () {})],
+        actions: [
+          SettingsButton(onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const SettingsScreen()),
+            );
+          }),
+        ],
       ),
       body: Container(
         color: Colors.white,
