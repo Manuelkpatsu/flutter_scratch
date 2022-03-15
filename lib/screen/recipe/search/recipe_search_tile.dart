@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'widget/recipe_name_text.dart';
-import 'widget/recipe_thumbnail.dart';
+import 'widget/recipe_search_name_text.dart';
+import 'widget/recipe_search_thumbnail.dart';
 
-class RecipeTile extends StatelessWidget {
+class RecipeSearchTile extends StatelessWidget {
   final String thumbnail;
   final String name;
   final void Function()? onTap;
 
-  const RecipeTile({
+  const RecipeSearchTile({
     Key? key,
     required this.thumbnail,
     required this.name,
@@ -26,9 +26,9 @@ class RecipeTile extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              RecipeThumbnail(thumbnail: thumbnail),
+              RecipeSearchThumbnail(thumbnail: thumbnail),
               const SizedBox(height: 10),
-              RecipeNameText(name: name),
+              RecipeSearchNameText(name: name),
             ],
           ),
         ),

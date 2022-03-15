@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/profile.dart';
 
-import '../profile_tile.dart';
+import '../profile_search_tile.dart';
 
 class SearchProfileListView extends StatelessWidget {
   final List<Profile> profiles;
@@ -21,7 +21,7 @@ class SearchProfileListView extends StatelessWidget {
         itemBuilder: (context, int index) {
           Profile profile = profiles[index];
 
-          return ProfileTile(
+          return ProfileSearchTile(
             chefName: profile.chefName,
             thumbnail: profile.thumbnail,
             totalNumberOfFollowers: profile.numberOfFollowers,

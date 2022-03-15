@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:scratch/screen/recipe/search/widget/profile_avatar.dart';
+import 'package:scratch/screen/recipe/search/widget/profile_search_avatar.dart';
 
-import 'widget/chef_profile_name_text.dart';
-import 'widget/profile_background_thumbnail.dart';
-import 'widget/profile_followers_text.dart';
-import 'widget/profile_recipes_text.dart';
+import 'widget/chef_profile_search_name_text.dart';
+import 'widget/profile_search_background_thumbnail.dart';
+import 'widget/profile_search_followers_text.dart';
+import 'widget/profile_search_recipes_text.dart';
 
-class ProfileTile extends StatelessWidget {
+class ProfileSearchTile extends StatelessWidget {
   final VoidCallback? onTap;
   final String thumbnail;
   final String profileImg;
@@ -14,7 +14,7 @@ class ProfileTile extends StatelessWidget {
   final int totalNumberOfRecipes;
   final int totalNumberOfFollowers;
 
-  const ProfileTile({
+  const ProfileSearchTile({
     Key? key,
     required this.onTap,
     required this.thumbnail,
@@ -38,12 +38,12 @@ class ProfileTile extends StatelessWidget {
               Stack(
                 children: [
                   Container(height: 140),
-                  ProfileBackgroundThumbnail(thumbnail: thumbnail),
-                  ProfileAvatar(profileImg: profileImg),
+                  ProfileSearchBackgroundThumbnail(thumbnail: thumbnail),
+                  ProfileSearchAvatar(profileImg: profileImg),
                 ],
               ),
               const SizedBox(height: 10),
-              ChefProfileNameText(name: chefName),
+              ChefProfileSearchNameText(name: chefName),
               const SizedBox(height: 10),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
@@ -51,10 +51,10 @@ class ProfileTile extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    ProfileRecipesText(
+                    ProfileSearchRecipesText(
                       totalNumberOfRecipes: totalNumberOfRecipes,
                     ),
-                    ProfileFollowersText(
+                    ProfileSearchFollowersText(
                       totalNumberOfFollowers: totalNumberOfFollowers,
                     ),
                   ],

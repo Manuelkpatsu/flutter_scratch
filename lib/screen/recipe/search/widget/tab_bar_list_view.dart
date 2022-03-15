@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/recipe.dart';
 
-import '../recipe_tile.dart';
+import '../recipe_search_tile.dart';
 
 class TabBarListView extends StatelessWidget {
   final List<Recipe> recipes;
@@ -20,7 +20,7 @@ class TabBarListView extends StatelessWidget {
         itemBuilder: (context, int index) {
           Recipe recipe = recipes[index];
 
-          return RecipeTile(
+          return RecipeSearchTile(
             thumbnail: recipe.thumbnail,
             name: recipe.name,
             onTap: () {},

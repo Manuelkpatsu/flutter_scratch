@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/recipe.dart';
 
-import '../recipe_tile.dart';
+import '../recipe_search_tile.dart';
 
 class RecipeListView extends StatelessWidget {
   final List<Recipe> trendingRecipes;
@@ -21,7 +21,7 @@ class RecipeListView extends StatelessWidget {
         itemBuilder: (context, int index) {
           Recipe recipe = trendingRecipes[index];
 
-          return RecipeTile(
+          return RecipeSearchTile(
             thumbnail: recipe.thumbnail,
             name: recipe.name,
             onTap: () {},
