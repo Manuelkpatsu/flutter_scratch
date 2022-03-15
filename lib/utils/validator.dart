@@ -26,6 +26,28 @@ class Validator {
     return null;
   };
 
+  static FormFieldValidator<String> bio = (bio) {
+    if (bio == null || bio.isEmpty) {
+      return 'Bio is required.';
+    }
+
+    return null;
+  };
+
+  static FormFieldValidator<String> phoneNumber = (phoneNumber) {
+    if (phoneNumber == null || phoneNumber.isEmpty) {
+      return 'Phone number is required.';
+    }
+
+    String patttern = r'(^(?:[+0]9)?[0-9]{10,12}$)';
+    RegExp regExp = RegExp(patttern);
+    if (!regExp.hasMatch(phoneNumber)) {
+      return 'Please enter valid phone number.';
+    }
+
+    return null;
+  };
+
   static FormFieldValidator<String> password = (password) {
     if (password == null || password.isEmpty) {
       return 'Password is required';

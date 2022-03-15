@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scratch/model/profile.dart';
 import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
+import 'package:scratch/screen/recipe/edit_profile/edit_profile_screen.dart';
 import 'package:scratch/screen/recipe/profile/recipe_category_tile.dart';
 import 'package:scratch/screen/recipe/settings/settings_screen.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
@@ -203,8 +204,19 @@ class _ProfileScreenState extends State<ProfileScreen>
                                 ],
                               ),
                               Material(
-                                  color: Colors.transparent,
-                                  child: EditProfileButton(onPressed: () {})),
+                                color: Colors.transparent,
+                                child: EditProfileButton(
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) =>
+                                            const EditProfileScreen(),
+                                      ),
+                                    );
+                                  },
+                                ),
+                              ),
                             ],
                           ),
                           const SizedBox(height: 10),
