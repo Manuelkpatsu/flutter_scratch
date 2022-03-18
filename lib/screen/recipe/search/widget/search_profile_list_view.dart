@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/profile.dart';
+import 'package:scratch/screen/recipe/other_user_profile/other_user_profile_screen.dart';
 
 import '../profile_search_tile.dart';
 
@@ -27,7 +28,11 @@ class SearchProfileListView extends StatelessWidget {
             totalNumberOfFollowers: profile.numberOfFollowers,
             totalNumberOfRecipes: profile.numberOfRecipes,
             profileImg: profile.profileImg,
-            onTap: () {},
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const OtherUserProfileScreen(),
+              ),
+            ),
           );
         },
       ),

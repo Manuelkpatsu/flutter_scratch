@@ -8,6 +8,7 @@ import 'package:scratch/screen/recipe/settings/settings_screen.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 
+import '../other_user_profile/other_user_profile_screen.dart';
 import 'other_user_profile_tile.dart';
 import 'saved_recipe_tile.dart';
 import 'widget/about_chef_text.dart';
@@ -301,7 +302,11 @@ class _ProfileScreenState extends State<ProfileScreen>
                         Profile profile = _profiles[index];
 
                         return OtherUserProfileTile(
-                          onTap: () {},
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const OtherUserProfileScreen(),
+                            ),
+                          ),
                           chefName: profile.chefName,
                           thumbnail: profile.thumbnail,
                           profileImg: profile.profileImg,
