@@ -28,6 +28,8 @@ class NonEmptySearchState extends StatelessWidget {
         numberOfComments: 5,
         createdAt: '4h ago',
         favorite: false,
+        cookingDuration: 30,
+        totalNumberOfIngredients: 6,
       ),
       const Recipe(
         name: 'Coconut Pound Cake',
@@ -40,6 +42,8 @@ class NonEmptySearchState extends StatelessWidget {
         numberOfComments: 14,
         createdAt: '3h ago',
         favorite: true,
+        cookingDuration: 40,
+        totalNumberOfIngredients: 8,
       ),
       const Recipe(
         name: 'Cardamon Cranberry Pastry',
@@ -52,6 +56,8 @@ class NonEmptySearchState extends StatelessWidget {
         numberOfComments: 15,
         createdAt: '2h ago',
         favorite: true,
+        cookingDuration: 30,
+        totalNumberOfIngredients: 6,
       ),
     ];
     final List<Profile> _profiles = [

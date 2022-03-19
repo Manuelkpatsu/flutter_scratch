@@ -4,6 +4,7 @@ import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
 import 'package:scratch/screen/recipe/edit_profile/edit_profile_screen.dart';
 import 'package:scratch/screen/recipe/profile/recipe_category_tile.dart';
+import 'package:scratch/screen/recipe/recipes/recipes_screen.dart';
 import 'package:scratch/screen/recipe/settings/settings_screen.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
@@ -106,6 +107,8 @@ class _ProfileScreenState extends State<ProfileScreen>
         numberOfComments: 5,
         createdAt: '4h ago',
         favorite: false,
+        cookingDuration: 35,
+        totalNumberOfIngredients: 5,
       ),
       const Recipe(
         name: 'Coconut Pound Cake',
@@ -118,6 +121,8 @@ class _ProfileScreenState extends State<ProfileScreen>
         numberOfComments: 14,
         createdAt: '3h ago',
         favorite: true,
+        cookingDuration: 40,
+        totalNumberOfIngredients: 6,
       ),
       const Recipe(
         name: 'Cardamon Cranberry Pastry',
@@ -130,6 +135,8 @@ class _ProfileScreenState extends State<ProfileScreen>
         numberOfComments: 15,
         createdAt: '2h ago',
         favorite: true,
+        cookingDuration: 50,
+        totalNumberOfIngredients: 7,
       ),
     ];
     final List<Profile> _profiles = [
@@ -258,7 +265,11 @@ class _ProfileScreenState extends State<ProfileScreen>
                             _recipeCategories[index];
 
                         return RecipeCategoryTile(
-                          onTap: () {},
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const RecipesScreen(),
+                            ),
+                          ),
                           thumbnail: recipeCategory.thumbnail,
                           name: recipeCategory.name,
                         );

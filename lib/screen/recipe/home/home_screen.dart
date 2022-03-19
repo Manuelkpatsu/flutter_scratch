@@ -24,6 +24,8 @@ class HomeScreen extends StatelessWidget {
         numberOfComments: 8,
         createdAt: '2h ago',
         favorite: false,
+        cookingDuration: 45,
+        totalNumberOfIngredients: 4,
       ),
       const Recipe(
         name: 'White Wine Toffee',
@@ -36,6 +38,8 @@ class HomeScreen extends StatelessWidget {
         numberOfComments: 10,
         createdAt: '2h ago',
         favorite: true,
+        cookingDuration: 30,
+        totalNumberOfIngredients: 5,
       ),
       const Recipe(
         name: 'Vanilla Pud',
@@ -48,6 +52,8 @@ class HomeScreen extends StatelessWidget {
         numberOfComments: 20,
         createdAt: '2h ago',
         favorite: true,
+        cookingDuration: 30,
+        totalNumberOfIngredients: 8,
       ),
       const Recipe(
         name: 'Cured Vegetables & Mutton',
@@ -60,6 +66,8 @@ class HomeScreen extends StatelessWidget {
         numberOfComments: 4,
         createdAt: '2h ago',
         favorite: false,
+        cookingDuration: 35,
+        totalNumberOfIngredients: 5,
       ),
       const Recipe(
         name: 'Engine-Cooked Honey Orange Pancake',
@@ -72,6 +80,8 @@ class HomeScreen extends StatelessWidget {
         numberOfComments: 30,
         createdAt: '4h ago',
         favorite: true,
+        cookingDuration: 45,
+        totalNumberOfIngredients: 6,
       ),
     ];
     List<String> _cookbooks = ['Western', 'Quick Lunch', 'Vegies'];

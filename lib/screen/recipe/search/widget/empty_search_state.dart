@@ -45,6 +45,8 @@ class _EmptySearchStateState extends State<EmptySearchState>
         numberOfComments: 5,
         createdAt: '4h ago',
         favorite: false,
+        cookingDuration: 45,
+        totalNumberOfIngredients: 5,
       ),
       const Recipe(
         name: 'Coconut Pound Cake',
@@ -57,6 +59,8 @@ class _EmptySearchStateState extends State<EmptySearchState>
         numberOfComments: 14,
         createdAt: '3h ago',
         favorite: true,
+        cookingDuration: 30,
+        totalNumberOfIngredients: 6,
       ),
       const Recipe(
         name: 'Cardamon Cranberry Pastry',
@@ -69,6 +73,8 @@ class _EmptySearchStateState extends State<EmptySearchState>
         numberOfComments: 15,
         createdAt: '2h ago',
         favorite: true,
+        cookingDuration: 20,
+        totalNumberOfIngredients: 8,
       ),
     ];
     final List<Widget> _tabs = [
@@ -90,6 +96,8 @@ class _EmptySearchStateState extends State<EmptySearchState>
         numberOfComments: 5,
         createdAt: '4h ago',
         favorite: false,
+        cookingDuration: 50,
+        totalNumberOfIngredients: 6,
       ),
       const Recipe(
         name: 'Sautéed Orange & Mustard Bruschetta',
@@ -102,6 +110,8 @@ class _EmptySearchStateState extends State<EmptySearchState>
         numberOfComments: 14,
         createdAt: '3h ago',
         favorite: true,
+        cookingDuration: 60,
+        totalNumberOfIngredients: 8,
       ),
       const Recipe(
         name: 'Blanched Peppermint Pheasant',
@@ -114,6 +124,8 @@ class _EmptySearchStateState extends State<EmptySearchState>
         numberOfComments: 15,
         createdAt: '2h ago',
         favorite: true,
+        cookingDuration: 55,
+        totalNumberOfIngredients: 9,
       ),
     ];
 

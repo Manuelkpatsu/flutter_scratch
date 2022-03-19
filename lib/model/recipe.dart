@@ -10,6 +10,8 @@ class Recipe extends Equatable {
   final int numberOfComments;
   final String createdAt;
   final bool favorite;
+  final int cookingDuration;
+  final int totalNumberOfIngredients;
 
   const Recipe({
     required this.name,
@@ -21,6 +23,8 @@ class Recipe extends Equatable {
     required this.numberOfComments,
     required this.createdAt,
     required this.favorite,
+    required this.cookingDuration,
+    required this.totalNumberOfIngredients,
   });
 
   @override
@@ -34,5 +38,7 @@ class Recipe extends Equatable {
         numberOfComments,
         createdAt,
         favorite,
+        cookingDuration,
+        totalNumberOfIngredients,
       ];
 }
