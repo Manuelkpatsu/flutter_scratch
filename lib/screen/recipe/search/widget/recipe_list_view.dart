@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/recipe.dart';
+import 'package:scratch/screen/recipe/detailed_recipe/detailed_recipe_screen.dart';
 
 import '../recipe_search_tile.dart';
 
@@ -24,7 +25,11 @@ class RecipeListView extends StatelessWidget {
           return RecipeSearchTile(
             thumbnail: recipe.thumbnail,
             name: recipe.name,
-            onTap: () {},
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => const DetailedRecipeScreen(),
+              ),
+            ),
           );
         },
       ),

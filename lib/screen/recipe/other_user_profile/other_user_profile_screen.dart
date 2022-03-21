@@ -172,7 +172,7 @@ class _OtherUserProfileScreenState extends State<OtherUserProfileScreen>
                             _recipeCategories[index];
 
                         return RecipeCategoryTile(
-                          onTap: () {},
+                          onTap: null,
                           thumbnail: recipeCategory.thumbnail,
                           name: recipeCategory.name,
                         );
@@ -194,11 +194,7 @@ class _OtherUserProfileScreenState extends State<OtherUserProfileScreen>
                         Profile profile = _profiles[index];
 
                         return OtherUserProfileTile(
-                          onTap: () => Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (_) => const OtherUserProfileScreen(),
-                            ),
-                          ),
+                          onTap: null,
                           chefName: profile.chefName,
                           thumbnail: profile.thumbnail,
                           profileImg: profile.profileImg,

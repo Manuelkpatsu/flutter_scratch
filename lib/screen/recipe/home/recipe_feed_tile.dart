@@ -12,6 +12,7 @@ import 'widget/recipe_feed_likes_comments_text.dart';
 import 'widget/recipe_feed_name_text.dart';
 import 'widget/recipe_feed_thumbnail.dart';
 import 'widget/save_recipe_button.dart';
+import 'widget/save_to_cookbook_dialog.dart';
 
 class RecipeFeedTile extends StatefulWidget {
   final String thumbnail;
@@ -24,7 +25,6 @@ class RecipeFeedTile extends StatefulWidget {
   final String description;
   final int likes;
   final int comments;
-  final VoidCallback? openDialog;
 
   RecipeFeedTile({
     Key? key,
@@ -38,7 +38,6 @@ class RecipeFeedTile extends StatefulWidget {
     required this.description,
     required this.likes,
     required this.comments,
-    required this.openDialog,
   }) : super(key: key);
 
   @override
@@ -46,6 +45,8 @@ class RecipeFeedTile extends StatefulWidget {
 }
 
 class _RecipeFeedTileState extends State<RecipeFeedTile> {
+  final List<String> _cookbooks = ['Western', 'Quick Lunch', 'Vegies'];
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -55,6 +56,7 @@ class _RecipeFeedTileState extends State<RecipeFeedTile> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
       child: InkWell(
         onTap: widget.onTap,
+        borderRadius: BorderRadius.circular(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -113,7 +115,20 @@ class _RecipeFeedTileState extends State<RecipeFeedTile> {
                 children: [
                   RecipeFeedLikesCommentsText(
                       likes: widget.likes, comments: widget.comments),
-                  SaveRecipeButton(onPressed: widget.openDialog),
+                  SaveRecipeButton(onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return SaveToCookbookDialog(
+                          cookbooks: _cookbooks,
+                          addNewCookbook: () => Navigator.of(context).pop(),
+                          closeDialog: () => Navigator.of(context).pop(),
+                          addRecipeToCookbook: () =>
+                              Navigator.of(context).pop(),
+                        );
+                      },
+                    );
+                  }),
                 ],
               ),
             ),

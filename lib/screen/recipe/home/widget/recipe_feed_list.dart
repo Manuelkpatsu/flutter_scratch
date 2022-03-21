@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/recipe.dart';
+import 'package:scratch/screen/recipe/detailed_recipe/detailed_recipe_screen.dart';
 
 import '../recipe_feed_tile.dart';
-import 'save_to_cookbook_dialog.dart';
 
 class RecipeFeedList extends StatelessWidget {
   final List<Recipe> recipes;
-  final List<String> cookbooks;
 
-  const RecipeFeedList({
-    Key? key,
-    required this.recipes,
-    required this.cookbooks,
-  }) : super(key: key);
+  const RecipeFeedList({Key? key, required this.recipes}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +19,11 @@ class RecipeFeedList extends StatelessWidget {
 
         return RecipeFeedTile(
           thumbnail: recipe.thumbnail,
-          onTap: () {},
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => const DetailedRecipeScreen(),
+            ),
+          ),
           chefThumbnail: recipe.chefThumbnail,
           chefName: recipe.chefName,
           createdAt: recipe.createdAt,
@@ -33,19 +32,6 @@ class RecipeFeedList extends StatelessWidget {
           description: recipe.description,
           likes: recipe.numberOfLikes,
           comments: recipe.numberOfComments,
-          openDialog: () {
-            showDialog(
-              context: context,
-              builder: (BuildContext context) {
-                return SaveToCookbookDialog(
-                  cookbooks: cookbooks,
-                  addNewCookbook: () => Navigator.of(context).pop(),
-                  closeDialog: () => Navigator.of(context).pop(),
-                  addRecipeToCookbook: () => Navigator.of(context).pop(),
-                );
-              },
-            );
-          },
         );
       },
     );

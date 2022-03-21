@@ -84,7 +84,6 @@ class HomeScreen extends StatelessWidget {
         totalNumberOfIngredients: 6,
       ),
     ];
-    List<String> _cookbooks = ['Western', 'Quick Lunch', 'Vegies'];
 
     return Scaffold(
       appBar: AppBar(
@@ -100,7 +99,7 @@ class HomeScreen extends StatelessWidget {
           MessagesButton(onPressed: () {}),
         ],
       ),
-      body: RecipeFeedList(recipes: _recipes, cookbooks: _cookbooks),
+      body: RecipeFeedList(recipes: _recipes),
     );
   }
 }

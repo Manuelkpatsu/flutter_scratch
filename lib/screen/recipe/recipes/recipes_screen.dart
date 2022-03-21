@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
+import 'package:scratch/screen/recipe/detailed_recipe/detailed_recipe_screen.dart';
 import 'package:scratch/screen/recipe/recipes/recipe_tile.dart';
 
 import 'widgets/add_new_recipe_button.dart';
@@ -164,7 +165,11 @@ class _RecipesScreenState extends State<RecipesScreen> {
                   name: recipe.name,
                   duration: recipe.cookingDuration,
                   totalNumberOfIngredients: recipe.totalNumberOfIngredients,
-                  onPressed: () {},
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const DetailedRecipeScreen(),
+                    ),
+                  ),
                   onWatchCookingPressed: () {},
                 );
               },

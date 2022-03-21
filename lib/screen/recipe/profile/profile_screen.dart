@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:scratch/model/profile.dart';
 import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
+import 'package:scratch/screen/recipe/detailed_recipe/detailed_recipe_screen.dart';
 import 'package:scratch/screen/recipe/edit_profile/edit_profile_screen.dart';
 import 'package:scratch/screen/recipe/profile/recipe_category_tile.dart';
 import 'package:scratch/screen/recipe/recipes/recipes_screen.dart';
@@ -291,7 +292,11 @@ class _ProfileScreenState extends State<ProfileScreen>
                         Recipe savedRecipe = _savedRecipes[index];
 
                         return SavedRecipeTile(
-                          onTap: () {},
+                          onTap: () => Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => const DetailedRecipeScreen(),
+                            ),
+                          ),
                           thumbnail: savedRecipe.thumbnail,
                           name: savedRecipe.name,
                         );
