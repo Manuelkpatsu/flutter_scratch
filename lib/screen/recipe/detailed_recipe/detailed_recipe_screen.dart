@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/ingredient.dart';
+import 'package:scratch/screen/recipe/cooking_mode/cooking_mode_screen.dart';
 import 'package:scratch/screen/recipe/detailed_recipe/ingredient_tile.dart';
 import 'package:scratch/theme/custom_color.dart';
 import 'package:scratch/theme/styles.dart';
@@ -76,7 +77,7 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
                   final darkAppBarIcon = constraints.scrollOffset > 340;
 
                   return SliverAppBar(
-                    expandedHeight: 400,
+                    expandedHeight: 420,
                     floating: false,
                     pinned: true,
                     elevation: 0.5,
@@ -90,7 +91,13 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
                     ),
                     actions: [
                       CookNowButton(
-                          onPressed: () {}, colorChanged: darkAppBarIcon),
+                        onPressed: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const CookingModeScreen(),
+                          ),
+                        ),
+                        colorChanged: darkAppBarIcon,
+                      ),
                     ],
                     flexibleSpace: FlexibleSpaceBar(
                       background: Column(
@@ -106,7 +113,7 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
                               )
                             ],
                           ),
-                          const SizedBox(height: 20),
+                          const SizedBox(height: 15),
                           GalleryGridView(galleryItems: _galleryItems),
                         ],
                       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
+import 'package:scratch/screen/recipe/cooking_mode/cooking_mode_screen.dart';
 import 'package:scratch/screen/recipe/detailed_recipe/detailed_recipe_screen.dart';
 import 'package:scratch/screen/recipe/recipes/recipe_tile.dart';
 
@@ -170,7 +171,11 @@ class _RecipesScreenState extends State<RecipesScreen> {
                       builder: (_) => const DetailedRecipeScreen(),
                     ),
                   ),
-                  onWatchCookingPressed: () {},
+                  onWatchCookingPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) => const CookingModeScreen(),
+                    ),
+                  ),
                 );
               },
             ),
