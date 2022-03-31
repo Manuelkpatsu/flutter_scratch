@@ -2,7 +2,7 @@
 
 A [@nuel_nartey](https://twitter.com/nuel_nartey) Flutter Showcase project.
 
-## UI Store Design created by [InVision](https://www.invisionapp.com/)
+## UI Store Design created by [InVision](https://www.uistore.design/items/scratch-recipe-ui-kit)
 
 ## Design Cover
 <table>
