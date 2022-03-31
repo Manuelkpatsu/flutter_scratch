@@ -33,65 +33,67 @@ class _CookingModeScreenState extends State<CookingModeScreen> {
   ];
   final List<Ingredient> _ingredients = [
     const Ingredient(
-        thumbnail: 'assets/images/user.png',
+        thumbnail: 'assets/images/ingredients/chicken-breast.jpeg',
         name: '1 lb chicken breast(455 g), sliced'),
     const Ingredient(
-        thumbnail: 'assets/images/user.png', name: '1 teaspoon pepper'),
+        thumbnail: 'assets/images/ingredients/powdered-pepper.jpeg',
+        name: '1 teaspoon pepper'),
     const Ingredient(
-        thumbnail: 'assets/images/user.png', name: '1 teaspoon salt'),
+        thumbnail: 'assets/images/ingredients/salt.jpeg',
+        name: '1 teaspoon salt'),
     const Ingredient(
-        thumbnail: 'assets/images/user.png',
+        thumbnail: 'assets/images/ingredients/sesame-oil.jpeg',
         name: '2 teaspoons sesame oil, divided'),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/chicken-broth.jpeg',
       name: '¼ cup chicken broth(60 mL)',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/soy-sauce.jpeg',
       name: '1 tablespoon soy sauce',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/hoisin-sauce.png',
       name: '1 tablespoon hoisin sauce',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/cornstarch.jpeg',
       name: '1 teaspoon cornstarch',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/vegetable-oil.jpeg',
       name: '1 tablespoon vegetable oil',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/minced-garlic.jpeg',
       name: '2 cloves garlic, minced',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/minced-ginger.jpeg',
       name: '1 tablespoon minced fresh ginger',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/shiitake-mushroom.jpeg',
       name: '½ cup shiitake mushroom, sliced',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/onion.jpeg',
       name: '½ cup onion, sliced',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/carrot.jpeg',
       name: '½ cup carrot(61 g), sliced',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/sugar-snap-peas.jpeg',
       name: '½ cup sugar snap peas(49 g), halved',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/egg-noodle.jpeg',
       name: '4 servings cooked egg noodles',
     ),
     const Ingredient(
-      thumbnail: 'assets/images/user.png',
+      thumbnail: 'assets/images/ingredients/scallion.jpeg',
       name: '1 tablespoon scallions, chopped, for garnish',
     ),
   ];

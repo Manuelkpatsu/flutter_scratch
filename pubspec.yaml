@@ -34,6 +34,7 @@ flutter:
     - assets/images/gallery/
     - assets/images/recipes/
     - assets/images/recipe-category/
+    - assets/images/ingredients/
 
   fonts:
     - family: NunitoSans

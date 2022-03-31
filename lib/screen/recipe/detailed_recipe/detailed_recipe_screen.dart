@@ -39,23 +39,79 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
     ];
     final List<Ingredient> _ingredients = [
       const Ingredient(
-          thumbnail: 'assets/images/user.png', name: 'Cooking spray'),
+          thumbnail: 'assets/images/ingredients/chicken-breast.jpeg',
+          name: '1 lb chicken breast(455 g), sliced'),
       const Ingredient(
-          thumbnail: 'assets/images/user.png', name: '1/2 cup whole milk'),
+          thumbnail: 'assets/images/ingredients/powdered-pepper.jpeg',
+          name: '1 teaspoon pepper'),
       const Ingredient(
-          thumbnail: 'assets/images/user.png', name: '2 large eggs'),
+          thumbnail: 'assets/images/ingredients/salt.jpeg',
+          name: '1 teaspoon salt'),
       const Ingredient(
-          thumbnail: 'assets/images/user.png',
-          name: '1 tablespoon maple syrup,'),
+          thumbnail: 'assets/images/ingredients/sesame-oil.jpeg',
+          name: '2 teaspoons sesame oil, divided'),
       const Ingredient(
-        thumbnail: 'assets/images/user.png',
-        name: '1/2 teaspoon vanilla extract',
+        thumbnail: 'assets/images/ingredients/chicken-broth.jpeg',
+        name: '¼ cup chicken broth(60 mL)',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/soy-sauce.jpeg',
+        name: '1 tablespoon soy sauce',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/hoisin-sauce.png',
+        name: '1 tablespoon hoisin sauce',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/cornstarch.jpeg',
+        name: '1 teaspoon cornstarch',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/vegetable-oil.jpeg',
+        name: '1 tablespoon vegetable oil',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/minced-garlic.jpeg',
+        name: '2 cloves garlic, minced',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/minced-ginger.jpeg',
+        name: '1 tablespoon minced fresh ginger',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/shiitake-mushroom.jpeg',
+        name: '½ cup shiitake mushroom, sliced',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/onion.jpeg',
+        name: '½ cup onion, sliced',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/carrot.jpeg',
+        name: '½ cup carrot(61 g), sliced',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/sugar-snap-peas.jpeg',
+        name: '½ cup sugar snap peas(49 g), halved',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/egg-noodle.jpeg',
+        name: '4 servings cooked egg noodles',
+      ),
+      const Ingredient(
+        thumbnail: 'assets/images/ingredients/scallion.jpeg',
+        name: '1 tablespoon scallions, chopped, for garnish',
       ),
     ];
     final List<String> _directions = [
-      'Heat a Belgian waffle iron',
-      'Mix the flour, sugar, and baking powder together in a mixing bowl. Stir in 1 cup eggnog, butter, and the egg until well blended. Add more eggnog if needed to make a pourable batter.',
-      'Lightly grease or spray the waffle iron with non-stick cooking spray. Pour some batter onto the preheated waffle iron',
+      'In a medium bowl, season the chicken with pepper, salt and 1 tablespoon of sesame oil. Mix thoroughly and set aside.',
+      'In a separate medium bowl, combine the chicken broth, remaining tablespoon of sesame oil, soy sauce, hoisin sauce, and cornstarch. Mix thoroughly and set aside.',
+      'Heat the vegetable oil in a wok or large pan over medium-high heat. Add the chicken and cook until no longer pink inside, 3-4 minutes. Remove the chicken from the pan and set aside.',
+      'Add the garlic and ginger to the pan and cook until fragrant.',
+      'Add the mushrooms, onions, carrots, and sugar snap peas. Stir fry until the vegetables are tender.',
+      'Return the cooked chicken to the pan and add the cooked egg noodles and reserved sauce. Cook for 3 minutes, until everything is well-coated in the sauce.',
+      'Serve garnished with scallions.',
+      'Enjoy!',
     ];
     final List<String> _nutrients = [
       '222 calories',
@@ -109,7 +165,7 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
                                 thumbnail: 'assets/images/recipes/recipe-9.png',
                               ),
                               ExpandedDetailedRecipeNameText(
-                                name: 'Engine-Cooked Honey Orange Pancake',
+                                name: 'Chicken Lo Mein',
                               )
                             ],
                           ),
