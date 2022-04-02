@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/ingredient.dart';
 import 'package:scratch/screen/recipe/cooking_mode/cooking_mode_screen.dart';
-import 'package:scratch/screen/recipe/detailed_recipe/ingredient_tile.dart';
+import 'package:scratch/screen/recipe/detailed_recipe/detaile_recipe_ingredient_tile.dart';
 import 'package:scratch/theme/custom_color.dart';
 import 'package:scratch/theme/styles.dart';
 
-import 'direction_tile.dart';
+import 'detailed_direction_tile.dart';
 import 'widget/additional_info_heading_text.dart';
 import 'widget/additional_info_text.dart';
 import 'widget/cook_now_button.dart';
@@ -210,7 +210,7 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
                   itemBuilder: (context, index) {
                     Ingredient ingredient = _ingredients[index];
 
-                    return IngredientTile(
+                    return DetailedRecipeIngredientTile(
                       thumbnail: ingredient.thumbnail,
                       name: ingredient.name,
                     );
@@ -223,7 +223,7 @@ class _DetailedRecipeScreenState extends State<DetailedRecipeScreen> {
                   itemBuilder: (context, index) {
                     String direction = _directions[index];
 
-                    return DirectionTile(
+                    return DetailedDirectionTile(
                       number: index + 1,
                       direction: direction,
                     );

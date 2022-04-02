@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/screen/recipe/widget/profile_tile.dart';
 
-class ProfileSearchTile extends ProfileTile {
-  const ProfileSearchTile({
+class UserProfileTile extends ProfileTile {
+  const UserProfileTile({
     Key? key,
     required VoidCallback? onTap,
     required String thumbnail,
@@ -20,6 +20,5 @@ class ProfileSearchTile extends ProfileTile {
           totalNumberOfFollowers: totalNumberOfFollowers,
           totalNumberOfRecipes: totalNumberOfRecipes,
           width: width,
-          padding: const EdgeInsets.only(right: 15),
         );
 }

@@ -4,14 +4,14 @@ import 'package:scratch/model/recipe.dart';
 import 'package:scratch/model/recipe_category.dart';
 import 'package:scratch/screen/recipe/detailed_recipe/detailed_recipe_screen.dart';
 import 'package:scratch/screen/recipe/edit_profile/edit_profile_screen.dart';
-import 'package:scratch/screen/recipe/profile/recipe_category_tile.dart';
 import 'package:scratch/screen/recipe/recipes/recipes_screen.dart';
 import 'package:scratch/screen/recipe/settings/settings_screen.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 
 import '../other_user_profile/other_user_profile_screen.dart';
-import 'other_user_profile_tile.dart';
+import 'profile_recipe_category_tile.dart';
+import 'user_profile_tile.dart';
 import 'saved_recipe_tile.dart';
 import 'widget/about_chef_text.dart';
 import 'widget/edit_profile_button.dart';
@@ -265,7 +265,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                         RecipeCategory recipeCategory =
                             _recipeCategories[index];
 
-                        return RecipeCategoryTile(
+                        return ProfileRecipeCategoryTile(
                           onTap: () => Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (_) => const RecipesScreen(),
@@ -317,7 +317,8 @@ class _ProfileScreenState extends State<ProfileScreen>
                       itemBuilder: (BuildContext ctx, int index) {
                         Profile profile = _profiles[index];
 
-                        return OtherUserProfileTile(
+                        return UserProfileTile(
+                          width: MediaQuery.of(context).size.width,
                           onTap: () => Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (_) => const OtherUserProfileScreen(),

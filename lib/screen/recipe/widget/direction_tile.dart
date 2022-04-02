@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'widget/direction_text.dart';
-import 'widget/number_bullet.dart';
+import 'direction_text.dart';
+import 'number_bullet.dart';
 
 class DirectionTile extends StatelessWidget {
   final int number;

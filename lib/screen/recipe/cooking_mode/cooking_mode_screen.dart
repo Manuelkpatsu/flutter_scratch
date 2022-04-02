@@ -2,12 +2,12 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:scratch/model/ingredient.dart';
 import 'package:scratch/screen/recipe/cooking_mode/widget/steps_text.dart';
-import 'package:scratch/screen/recipe/detailed_recipe/direction_tile.dart';
 import 'package:scratch/theme/custom_color.dart';
 import 'package:video_player/video_player.dart';
 
+import 'cooking_mode_direction_tile.dart';
 import 'widget/cooking_mode_text.dart';
-import 'widget/ingredients_botto_sheet_content.dart';
+import 'ingredients_botto_sheet_content.dart';
 import 'widget/recipe_title_text.dart';
 import 'widget/view_ingredients_button.dart';
 
@@ -189,10 +189,9 @@ class _CookingModeScreenState extends State<CookingModeScreen> {
                     itemBuilder: (context, index) {
                       String direction = _steps[index];
 
-                      return DirectionTile(
+                      return CookingModeDirectionTile(
                         number: index + 1,
                         direction: direction,
-                        padding: const EdgeInsets.only(bottom: 10),
                       );
                     },
                   ),

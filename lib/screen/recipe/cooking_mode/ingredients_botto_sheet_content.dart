@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/ingredient.dart';
-import 'package:scratch/screen/recipe/detailed_recipe/ingredient_tile.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 import 'package:scratch/theme/styles.dart';
+
+import 'cooking_mode_ingredient_tile.dart';
 
 class IngredientsBottomSheetContent extends StatelessWidget {
   final VoidCallback onPressed;
@@ -48,10 +49,9 @@ class IngredientsBottomSheetContent extends StatelessWidget {
               itemBuilder: (context, index) {
                 Ingredient ingredient = ingredients[index];
 
-                return IngredientTile(
+                return CookingModeIngredientTile(
                   thumbnail: ingredient.thumbnail,
                   name: ingredient.name,
-                  padding: const EdgeInsets.only(bottom: 15),
                 );
               },
             ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/theme/custom_color.dart';
 
-import 'widget/recipe_category_name_text.dart';
-import 'widget/recipe_category_thumbnail.dart';
+import 'recipe_category_name_text.dart';
+import 'recipe_category_thumbnail.dart';
 
 class RecipeCategoryTile extends StatelessWidget {
   final VoidCallback? onTap;

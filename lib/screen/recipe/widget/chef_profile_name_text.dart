@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/theme/styles.dart';
 
-class ChefProfileSearchNameText extends StatelessWidget {
+class ChefProfileNameText extends StatelessWidget {
   final String name;
 
-  const ChefProfileSearchNameText({Key? key, required this.name})
-      : super(key: key);
+  const ChefProfileNameText({Key? key, required this.name}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

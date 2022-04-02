@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'widget/ingredient_name_text.dart';
-import 'widget/ingredient_thumbnail.dart';
+import 'ingrdient_thumbnail.dart';
+import 'ingredient_name_text.dart';
 
 class IngredientTile extends StatelessWidget {
   final String thumbnail;

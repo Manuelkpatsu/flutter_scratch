@@ -3,10 +3,10 @@ import 'package:scratch/model/recipe.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 
-import 'heading_text.dart';
-import 'ingrediant_tab_bar.dart';
-import 'tab_bar_list_view.dart';
-import 'recipe_list_view.dart';
+import 'widget/heading_text.dart';
+import 'widget/ingrediant_tab_bar.dart';
+import 'widget/tab_bar_list_view.dart';
+import 'widget/recipe_list_view.dart';
 
 class EmptySearchState extends StatefulWidget {
   const EmptySearchState({Key? key}) : super(key: key);

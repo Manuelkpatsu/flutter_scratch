@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/model/profile.dart';
 import 'package:scratch/model/recipe_category.dart';
-import 'package:scratch/screen/recipe/profile/other_user_profile_tile.dart';
-import 'package:scratch/screen/recipe/profile/recipe_category_tile.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 
+import 'other_user_profile_recipe_category_tile.dart';
+import 'other_user_profile_tile.dart';
 import 'widget/about_user_text.dart';
 import 'widget/follow_user_button.dart';
 import 'widget/user_followers_likes_text.dart';
@@ -171,7 +171,7 @@ class _OtherUserProfileScreenState extends State<OtherUserProfileScreen>
                         RecipeCategory recipeCategory =
                             _recipeCategories[index];
 
-                        return RecipeCategoryTile(
+                        return OtherUserProfileRecipeCategoryTile(
                           onTap: null,
                           thumbnail: recipeCategory.thumbnail,
                           name: recipeCategory.name,
@@ -194,6 +194,7 @@ class _OtherUserProfileScreenState extends State<OtherUserProfileScreen>
                         Profile profile = _profiles[index];
 
                         return OtherUserProfileTile(
+                          width: MediaQuery.of(context).size.width,
                           onTap: null,
                           chefName: profile.chefName,
                           thumbnail: profile.thumbnail,

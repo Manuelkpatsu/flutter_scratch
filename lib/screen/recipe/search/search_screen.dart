@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'widget/empty_search_state.dart';
-import 'widget/non_empty_search_state.dart';
+import 'empty_search_state.dart';
+import 'non_empty_search_state.dart';
 import 'widget/search_filter_dialog.dart';
 import 'widget/search_text_field.dart';
 

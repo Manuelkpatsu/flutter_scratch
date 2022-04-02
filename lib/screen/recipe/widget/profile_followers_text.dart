@@ -2,27 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scratch/theme/styles.dart';
 
-class ProfileSearchRecipesText extends StatelessWidget {
-  final int totalNumberOfRecipes;
+class ProfileFollowersText extends StatelessWidget {
+  final int totalNumberOfFollowers;
 
-  const ProfileSearchRecipesText({Key? key, required this.totalNumberOfRecipes})
+  const ProfileFollowersText({Key? key, required this.totalNumberOfFollowers})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    var recipes =
-        NumberFormat.compactCurrency(symbol: '').format(totalNumberOfRecipes);
+    var followers =
+        NumberFormat.compactCurrency(symbol: '').format(totalNumberOfFollowers);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          recipes,
+          followers,
           textAlign: TextAlign.center,
           style: bodyStyle,
         ),
         Text(
-          'recipes',
+          'followers',
           textAlign: TextAlign.center,
           style: grayTextStyle.copyWith(fontSize: 10, height: 2.2),
         ),

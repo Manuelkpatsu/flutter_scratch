@@ -23,6 +23,7 @@ class SearchProfileListView extends StatelessWidget {
           Profile profile = profiles[index];
 
           return ProfileSearchTile(
+            width: 172,
             chefName: profile.chefName,
             thumbnail: profile.thumbnail,
             totalNumberOfFollowers: profile.numberOfFollowers,

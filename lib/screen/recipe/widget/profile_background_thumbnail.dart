@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:scratch/theme/custom_color.dart';
 
-class OtherUserProfileBackgroundThumbnail extends StatelessWidget {
+class ProfileBackgroundThumbnail extends StatelessWidget {
   final String thumbnail;
 
-  const OtherUserProfileBackgroundThumbnail({Key? key, required this.thumbnail})
+  const ProfileBackgroundThumbnail({Key? key, required this.thumbnail})
       : super(key: key);
 
   @override

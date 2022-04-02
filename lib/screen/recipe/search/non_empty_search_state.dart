@@ -5,11 +5,11 @@ import 'package:scratch/model/tag.dart';
 import 'package:scratch/screen/widget/custom_divider.dart';
 import 'package:scratch/theme/custom_color.dart';
 
-import 'heading_text.dart';
-import 'recipe_list_view.dart';
-import 'search_profile_list_view.dart';
-import 'show_all_button.dart';
-import 'tag_list_view.dart';
+import 'widget/heading_text.dart';
+import 'widget/recipe_list_view.dart';
+import 'widget/search_profile_list_view.dart';
+import 'widget/show_all_button.dart';
+import 'widget/tag_list_view.dart';
 
 class NonEmptySearchState extends StatelessWidget {
   const NonEmptySearchState({Key? key}) : super(key: key);
